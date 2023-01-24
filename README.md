@@ -1,3 +1,13 @@
+# dorian React blog start
+처음에는 npx create-react-app dorian-blog 
+로 리엑트 프로젝트를 생성 해줘야 하나 로컬 환경에 npm이
+없다면 주석을 제외 하고 docker-compose를 실행하면 로컬 경로에 프로젝트가 생성된다
+
+해당 프로젝트를 상위 디렉토리로 이동한다.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
