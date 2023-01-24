@@ -10,28 +10,16 @@ services:
     ports:
      - '80:3000'
     volumes:
-<<<<<<< HEAD
      - type: bind
        source: ./
        target: /app
      - /app/node_modules
       
-=======
-      #- ./:/app:rw
-     - type: bind
-       source: ./src
-       target: /app
-     #- ./src:/app
->>>>>>> 18b50c32f2a4253e92a61ae18b2b73198f1edb48
     environment:
       - CHOKIDAR_USEPOLLING=true
 
 
-<<<<<<< HEAD
     command: sh -c "npm start"
-=======
-    command: "npm start"
->>>>>>> 18b50c32f2a4253e92a61ae18b2b73198f1edb48
     #command: sh -c "cd dorian-blog && npm start"
 #    env_file:
 #     - ./.env.local
