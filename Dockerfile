@@ -8,6 +8,8 @@ WORKDIR /app
 
 # install and cache app dependencies
 COPY package.json /app
+RUN npm install -g npm-check-updates
+RUN ncu -u
 RUN npm install 
 RUN npm install react-scripts  -g --silent
 #RUN npm install react-scripts@3.0.1 -g --silent

@@ -1,26 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { TopNav, SearchAndToggler, PostHeader, PostContent, SideNav, PageDimmer, Masonry, NotFound, Footer } from './component/';
+import { Route, Switch } from 'react-router-dom';
+import 'semantic-ui-css/semantic.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         {/* Edit <code>src/App.js</code> and save to reload. */} 
-          dorian blog Making Tools by react
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <TopNav />
+        <SearchAndToggler />
+        <PageDimmer />
 
-export default App;
+        <SideNav>
+          <Route path='/' component={PostHeader} />
+          <Switch>
+            <Route path='/search/:query' component={Masonry} />
+            <Route path='/category/:query' component={Masonry} />
+            <Route path='/PageNotFound' exact component={NotFound} />
+            <Route path='/:postId' component={PostContent} />
+            <Route path='/' exact component={PostContent} />
+          </Switch>
+          <Footer />
+        </SideNav>
+      </div>
+    )
+  }
+};
+
+export default App
