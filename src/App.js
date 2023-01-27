@@ -1,27 +1,28 @@
-import React, { Component } from 'react';
-import { TopNav, SearchAndToggler, PostHeader, PostContent, SideNav, PageDimmer, Masonry, NotFound, Footer } from './component/';
-import { Route, Switch } from 'react-router-dom';
+import React  from 'react';
+import { TopNav, SearchAndToggler, PostHeader, PostContent, SideNav, PageDimmer, Masonry, NotFound, Footer } from './element/';
+//import { Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 
-class App extends Component {
+class App extends element {
   render() {
     return (
-      <div>
-        <TopNav />
-        <SearchAndToggler />
-        <PageDimmer />
+       <div>
+         {/* <TopNav />
+         <SearchAndToggler />
+         <PageDimmer />
 
-        <SideNav>
-          <Route path='/' component={PostHeader} />
-          <Switch>
-            <Route path='/search/:query' component={Masonry} />
-            <Route path='/category/:query' component={Masonry} />
-            <Route path='/PageNotFound' exact component={NotFound} />
-            <Route path='/:postId' component={PostContent} />
-            <Route path='/' exact component={PostContent} />
-          </Switch>
+        <SideNav> */}
+          {/* <Route path='/' element={PostHeader} /> */}
+          <Routes>
+            {/* <Route path='/search/:query' element={< Masonry />} />
+            <Route path='/category/:query' element={< Masonry />} />
+            <Route path='/PageNotFound' exact element={<NotFound />} />
+            <Route path='/:postId' element={< PostContent />} /> */}
+            <Route path='/'  element={< PostContent /> } />
+          </Routes>
           <Footer />
-        </SideNav>
+        {/* </SideNav> */}
       </div>
     )
   }
