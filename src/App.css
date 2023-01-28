@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: center ;
 }
 
 .App-logo {
@@ -44,4 +44,11 @@
   display : flex;
   color : white;
   padding : 20px;
+}
+
+.article{
+  margin : 5px;
+  background-color: gold;
+  width: 100px ;
+  height: 50px;
 }

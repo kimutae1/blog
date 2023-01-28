@@ -5,7 +5,12 @@
 
 해당 프로젝트를 상위 디렉토리로 이동한다.
 
+# wsl 사용 시 주의 사항
+"scripts": {
+    "start": "WATCHPACK_POLLING=true react-scripts start"
+    }
 
+    옵션을 사용 해야 hot reoad가 된다
 
 
 # Getting Started with Create React App
