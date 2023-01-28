@@ -9,13 +9,15 @@ export default function Router() {
     <BrowserRouter>
       <nav>
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/'>
-          Start
+          Start :
+        </NavLink> 
+
+         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/about'>
+          About :
         </NavLink>
-        <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/about'>
-          About
-        </NavLink>
+
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/contact'>
-          Contact
+          Contact :
         </NavLink>
       </nav>
 

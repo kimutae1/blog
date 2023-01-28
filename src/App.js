@@ -1,31 +1,39 @@
-//import logo from './logo.svg';
-import './App.css';
-
- import "./App.css";
+import logo from './logo.svg';
+import "./App.css";
+//  import Layout from './Components/Layout/Layout';
  import Router from "./Components/Router/Router";
+import Layout from './Components/Layout/layout';
+import Header from './Components/Layout/header';
+import Footer from './Components/Layout/footer';
  
  function App() {
   return (
+    // <Layout>
+
      <div className='App'>
+      <div className='App-header' >
+        <Header />
       { <Router /> }
-       <h4>111255</h4>
+
+         <img src={logo} className="App-logo" alt="logo" />
+       <h4>이제 react  블로그 환경 셋팅 끝</h4>
+      </div> 
+
+<Footer />
+
     </div>
+
+
+    // </Layout>
+
   );
 }
 
 
+export default App;
 
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <div className="black-nav">
-//         <h4>xxxx</h4>
-//       </div>
-//     </div>
-//   );
-// }
-// 
+
 
 // function App() {
 //   return (
@@ -49,5 +57,3 @@ import './App.css';
 // }
 
 
-
-export default App;
