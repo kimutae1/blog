@@ -1,5 +1,19 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+
+ import "./App.css";
+ import Router from "./Components/Router/Router";
+ 
+ function App() {
+  return (
+     <div className='App'>
+      { <Router /> }
+       <h4>1234555</h4>
+    </div>
+  );
+}
+
+
 
 
 // function App() {
@@ -34,18 +48,6 @@ import './App.css';
 //   );
 // }
 
-
-
- import "./App.css";
- import Router from "./Components/Router/Router";
- 
- function App() {
-  return (
-     <div className='App'>
-      { <Router /> }
-    </div>
-  );
-}
 
 
 export default App;
