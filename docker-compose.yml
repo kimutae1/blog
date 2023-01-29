@@ -17,16 +17,15 @@ services:
       
     environment:
      - WATCHPACK_POLLING=true
+     - PUBLIC_URL=https://kimutae1.github.io/blog/
 
 
-    command: sh -c "npm run dual"
+    command: sh -c "npm run page"
+    #command: sh -c "npm run dual"
 
 
   nginx:
     image: nginx
-   # build:
-   #  context: .
-   #  dockerfile: Dockerfile
     stdin_open: true
     tty: true
     ports:

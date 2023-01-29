@@ -6,7 +6,7 @@ import StartPage from "./Pages/Start/StartPage";
 
 export default function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <nav>
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/'>
           Start :
