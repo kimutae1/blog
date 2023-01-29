@@ -14,13 +14,10 @@
     "concurrently" : "7.6.0"
   },
   "scripts": {
-    "dual": "concurrently \"react-scripts build\"  \"react-scripts start\"",
-    "dual0": "concurrently \"npm run build\"  \"npm run start\" ",
-    "dual1": "concurrently \"npm run start\" \"npm run build\" ",
+    "dual": "concurrently \"npm run start\" \"npm run build\" ",
     "start": "WATCHPACK_POLLING=true react-scripts start",
     "build": "react-scripts build",
     "dev": "react-scripts start",
-    "stg": "react-scripts build && react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
