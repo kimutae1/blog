@@ -20,9 +20,20 @@ services:
 
 
     command: sh -c "npm run dev"
-    #command: sh -c "npm start"
-    #command: sh -c "
-    #  npm build &&
-    #  npm start"
-#    env_file:
-#     - ./.env.local
+
+
+  nginx:
+    image: nginx
+   # build:
+   #  context: .
+   #  dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    ports:
+     - '80:80'
+     - '443:443'
+    volumes:
+     - type: bind
+       source: ./build
+       target:  /usr/share/nginx/html
+      
