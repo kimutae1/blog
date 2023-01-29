@@ -17,6 +17,7 @@ services:
       
     environment:
      - WATCHPACK_POLLING=true
+     - PUBLIC_URL=https://kimutae1.github.io/blog/
 
 
     command: sh -c "npm run page"
